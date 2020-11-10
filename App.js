@@ -4,6 +4,7 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'reac
 import logo from './assets/Ace_of_spades.svg.png'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+<<<<<<< HEAD
 import styles from './styles.js'
 
 export default function App() {
@@ -12,6 +13,15 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName = 'Home' headerMode={false}>
         <Stack.Screen name = 'Home' component = {HomeScreen} />
+=======
+
+export default function App() {
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName = 'Home' headerMode={false}>
+        <Stack.Screen name = 'Home' component = {HomeScreen} options={{ title: 'Game Title' }} />
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
         <Stack.Screen name = 'NumberTeams' component = {NumberTeamsScreen} />
         <Stack.Screen name = 'EnterTeams' component = {EnterTeamsScreen} />
         <Stack.Screen name = 'Packs' component = {PacksScreen} />
@@ -24,14 +34,24 @@ export default function App() {
   );
 }
 
+<<<<<<< HEAD
 export const Stack = createStackNavigator();
 
+=======
+const Stack = createStackNavigator();
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
 
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.mainText}>Game Title</Text>
+<<<<<<< HEAD
       <Image source = {logo} style = {styles.logo} />
+=======
+
+      <Image source = {logo} style = {styles.logo} />
+
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
       <TouchableOpacity onPress = {() => navigation.navigate('NumberTeams')} style = {styles.button} >
         <Text style = {styles.buttonText}>Start Game</Text>
         </TouchableOpacity>
@@ -40,6 +60,7 @@ function HomeScreen({ navigation }) {
   );
 }
 
+<<<<<<< HEAD
 
 /** 
 function HomeToNumberTeams({ navigation }) {
@@ -51,12 +72,19 @@ function HomeToNumberTeams({ navigation }) {
 */
 
 function NumberTeamsScreen({ props }) {
+=======
+function NumberTeamsScreen({ navigation }) {
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
   const [value, setText] = React.useState('');
 
   return (
     <View style={styles.container}>
       <Text style={styles.mainText}>Game Title</Text>
+<<<<<<< HEAD
       <TouchableOpacity onPress = {() => this.props.navigation.navigate('Home')} style = {styles.button} >
+=======
+      <TouchableOpacity onPress = {() => navigation.navigate('Home')} style = {styles.button} >
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
         <Text style = {styles.buttonText}> Back </Text>
       </TouchableOpacity>
       <Image source = {logo} style = {styles.logo} />
@@ -64,6 +92,7 @@ function NumberTeamsScreen({ props }) {
 
       <TextInput style = {styles.textInput}
         label = "Number of Teams"
+<<<<<<< HEAD
         onChangeText = {text => setText(text)}
       />
 
@@ -73,6 +102,21 @@ function NumberTeamsScreen({ props }) {
         <Text style = {styles.buttonText}> Next </Text>
       </TouchableOpacity>
       
+=======
+        onChangeText = {text => setText(text)} 
+        value = {value} />
+
+      {/*
+       Submit editing 
+             <Text> {value} </Text>
+
+      */}
+
+      <TouchableOpacity onPress = {() => navigation.navigate('EnterTeams')} style = {styles.button} >
+        <Text style = {styles.buttonText}> Next </Text>
+      </TouchableOpacity>
+
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
     </View>
   );
 }
@@ -81,6 +125,10 @@ function EnterTeamsScreen({ navigation }) {
   return (
     <View style={styles.container}>
 {/*       <Text style={styles.mainText}>Game Title</Text>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
       <TouchableOpacity onPress = {() => navigation.navigate('NumberTeams')} style = {styles.button} >
         <Text style = {styles.buttonText}> Back </Text>
       </TouchableOpacity> */}
@@ -169,7 +217,10 @@ function GameOverScreen({ navigation }) {
 
 const bgColor = 'rgba(220,20,60,.75)'
 
+<<<<<<< HEAD
 /**
+=======
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -205,4 +256,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
   },
 });
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 6bef49bcd078390eeb6c9864fe6e178ca4ce2ec1

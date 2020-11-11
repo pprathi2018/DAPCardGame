@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import styles from "./styles.js";
 import logo from "./assets/Ace_of_spades.svg.png";
 import { TouchableOpacity, View, Text } from "react-native";

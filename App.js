@@ -7,15 +7,13 @@ import GameMain from "./GameMain";
 import GamePassPlay from "./GamePassPlay";
 import GameCard from "./GameCard";
 import GameOver from "./GameOver";
+import { createAppContainer } from "react-navigation";
 
 /////////////
 // App.js
-import {
-  createStackNavigator,
-  createAppContainer,
-} from "react-navigation-stack";
+import { createStackNavigator } from "react-navigation-stack";
 
-export default class App {
+export default class App extends React.Component {
   render() {
     return <AppContainer />;
   }

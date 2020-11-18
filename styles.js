@@ -15,16 +15,26 @@ const styles = StyleSheet.create({
       marginBottom: 10,
     },
     mainText: {
-      color: '#888',
-      fontSize: 18,
-      marginHorizontal: 20,
+      fontSize: 40,
+      fontWeight: "bold",
+    },
+    numTeamsText: {
+      fontSize: 20,
     },
     button: {
-      backgroundColor: 'blue',
+      backgroundColor: 'black',
       padding: 20,
       borderRadius: 5,
       marginBottom: 10,
       marginTop: 10,
+    },
+    backButton: {
+      backgroundColor: 'black',
+      padding: 5,
+      borderRadius: 5,
+      marginTop: 10,
+      marginBottom: 10,
+      alignSelf: 'flex-start'
     },
     buttonText: {
       fontSize: 20,
@@ -32,7 +42,7 @@ const styles = StyleSheet.create({
     },
     textInput: {
       height: 40,
-      width: 200,
+      width: 80,
       borderColor: 'gray',
       borderWidth: 4,
     },

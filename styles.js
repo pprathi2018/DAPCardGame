@@ -46,6 +46,25 @@ const styles = StyleSheet.create({
       borderColor: 'gray',
       borderWidth: 4,
     },
+    teamHeader: {
+      height: 41,
+      width: 148,
+      marginLeft: 6,
+      marginTop: 6,
+      textAlign: "center",
+      borderColor: 'transparent',
+      borderWidth: 2,
+    },
+    nameInput: {
+      height: 31,
+      width: 148,
+      marginLeft: 6,
+      marginTop: 6,
+      textAlign: "center",
+      borderColor: 'black',
+      borderWidth: 2,
+      borderRadius: 6,
+    }
   });
 
   export default styles;

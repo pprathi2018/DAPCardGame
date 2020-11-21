@@ -16,7 +16,7 @@ const NumberTeamsScreen = (props) => {
       });
       return unsubscribe;
     }, [props.navigation]);
-  
+
   
     checkNumTeams = () => {
       if (isNaN(value) || value < 1 || value > 4) {
@@ -24,18 +24,15 @@ const NumberTeamsScreen = (props) => {
         setText('');
       }
       else {
-        props.navigation.navigate('EnterTeams');
+        props.navigation.navigate('EnterTeams', {numTeams: value});
       }
     }
-  
-  
-  
+
     return (
       <View style={styles.container}>
         <View style= {[{width: 350,
                         backgroundColor: 'transparent',
-                        flexDirection: 'row',
-                        alignItems: 'center',}]}>
+                        flexDirection: 'row'}]}>
           <View style = {{backgroundColor: 'transparent', position: 'absolute', width: 350, alignItems: 'center'}}>
             <Text style={[styles.mainText]}>Game Title</Text>
           </View>
@@ -63,3 +60,13 @@ const NumberTeamsScreen = (props) => {
   }
 
 export default NumberTeamsScreen;
+
+function checkNumTeams() {
+  if (isNaN(value) || value < 1 || value > 4) {
+    alert('Enter valid number of teams');
+    setText('');
+  }
+  else {
+    props.navigation.navigate('EnterTeams');
+  }
+}

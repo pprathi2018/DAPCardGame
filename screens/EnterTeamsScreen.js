@@ -6,12 +6,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import styles from '../styles.js'
 import GoToScreen from '../Utilities';
-
+import { FlatList } from 'react-native-gesture-handler';
+import { ListTable } from '../containers.js';
 
 const EnterTeamsScreen = (props) => {
+
     return (
-        <View style={styles.container}>
-        <View style= {[{width: 350,
+      <View style={styles.container}>
+        <View style= {[{width: 370,
                         backgroundColor: 'transparent',
                         flexDirection: 'row',
                         alignItems: 'center',}]}>
@@ -20,12 +22,26 @@ const EnterTeamsScreen = (props) => {
           </View>
           <GoToScreen name = 'NumberTeams' buttonName ='Back' buttonStyle = {styles.backButton} />
         </View>
+
+        <View style = {{width: 370, height: 520, backgroundColor: 'transparent', flexDirection: 'row', flexWrap: 'wrap'}} >
+          <ListTable />
+          <ListTable />
+          <ListTable />
+          <ListTable />
+        </View>
         
-        <Image source = {logo} style = {styles.logo} />
-        <Text>Enter number of teams: </Text>
-        <GoToScreen name = 'GameMain' buttonName = 'Start' buttonStyle = {styles.button} />
+
+        <GoToScreen name = 'Packs' buttonName = 'Start' buttonStyle = {styles.button} />
+        
+        {/*<TouchableOpacity onPress = {storeNeighborTeams} style = {styles.button} >
+          <Text style = {styles.buttonText}> Next </Text>
+        </TouchableOpacity>*/}
       </View>
     );
 }
 
 export default EnterTeamsScreen;
+
+function storeNeighborTeams () {
+
+}

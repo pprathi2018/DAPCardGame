@@ -16,7 +16,7 @@ const NumberTeamsScreen = (props) => {
       });
       return unsubscribe;
     }, [props.navigation]);
-  
+
   
     checkNumTeams = () => {
       if (isNaN(value) || value < 1 || value > 4) {
@@ -27,9 +27,7 @@ const NumberTeamsScreen = (props) => {
         props.navigation.navigate('EnterTeams');
       }
     }
-  
-  
-  
+
     return (
       <View style={styles.container}>
         <View style= {[{width: 350,
@@ -63,3 +61,13 @@ const NumberTeamsScreen = (props) => {
   }
 
 export default NumberTeamsScreen;
+
+function checkNumTeams() {
+  if (isNaN(value) || value < 1 || value > 4) {
+    alert('Enter valid number of teams');
+    setText('');
+  }
+  else {
+    props.navigation.navigate('EnterTeams');
+  }
+}

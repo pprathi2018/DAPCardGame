@@ -16,7 +16,7 @@ const EnterTeamsScreen = () => {
   const createListTables = () => {
     var listTables = [];
     for (var i = 1; i <= numTeams; i++) {
-      listTables.push(<ListTable key = {i} />);
+      listTables.push(<ListTable key = {i} defaultName = {i} />);
     }
     return listTables;
   }
